@@ -22,7 +22,7 @@ def get_reaction(polymer):
             else:
                 reaction = False
         for i in sorted(reactions)[::-1]:
-            polymer.pop(i)
+            del polymer[i]
         polymer = new_polymer
     return polymer
 
@@ -32,6 +32,7 @@ def ans1(polymer):
 
 
 def ans2(polymer):
+    polymer = "".join(get_reaction(polymer))
     lens = []
     for letter in string.ascii_lowercase:
         lens.append(len(get_reaction(polymer.replace(letter, "").replace(letter.upper(), ""))))
