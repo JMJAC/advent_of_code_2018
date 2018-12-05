@@ -1,5 +1,4 @@
 from helpers import load_data_str
-import time
 
 
 def get_data_from_line(line):

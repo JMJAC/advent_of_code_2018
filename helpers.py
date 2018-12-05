@@ -13,4 +13,3 @@ def load_data_str(src):
 
             result.append(line.strip("\n"))
     return result
-
