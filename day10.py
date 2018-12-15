@@ -1,3 +1,4 @@
+
 with open("day10_input.txt") as file:
     data = [line.replace("<", " ").replace(">", " ").replace(",", "") for line in file.readlines()]
     data = [[line.split()[1], line.split()[2], line.split()[4], line.split()[5]] for line in data]
@@ -18,6 +19,8 @@ def draw(points, t):
         if line != "." * middle * 2:
             lines_to_print.append(line[400:-400])
             to_print += 1
+            if(to_print>20):
+                break
 
     if to_print < 20:
         [print(line) for line in lines_to_print]
